@@ -1,0 +1,230 @@
+@import "bourbon";
+@import "components/vars.scss";
+@import "components/normalize.scss";
+@import "components/fonts.scss";
+@import "components/fontello.scss";
+//Load Libs SASS
+@import "html/libs/animate/animate.sass";
+@import "html/libs/owl.carousel/dist/assets/owl.carousel.min";
+//@import "html/libs/superfish/dist/css/superfish";
+//@import "html/libs/font-awesome/scss/font-awesome.scss";
+//@import "html/libs/jQuery.mmenu/dist/css/jquery.mmenu.all";
+//@import "html/libs/magnific-popup/dist/magnific-popup";
+
+*::-webkit-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+*:-ms-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	color: #666;
+}
+body input:required:valid,
+body textarea:required:valid {
+	color: #666;
+}
+*,
+*:before,
+*:after{
+	box-sizing: border-box;
+}
+button {
+	padding: 0;
+	background-color: transparent;
+	outline: none;
+	border: none;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.4;
+	font-family: 'Open Sans', sans-serif;
+	color: #111;
+	background-color: #fff;
+	overflow-x: hidden;
+}
+.container {
+	max-width: 1232px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.hidden {
+	display: none;
+}
+a {
+	outline: none !important;
+}
+
+.title {
+	position: relative;
+	z-index: 1;
+	padding: 0 0 35px 0;
+	margin: 0 0 30px 0;
+	text-transform: uppercase;
+	color: $tc;
+	text-align: center;
+	h1, h2 {
+		margin: 0;
+		font-size: 87px;
+		font-weight: 700;
+		line-height: 1;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		width: 75px;
+		height: 5px;
+		margin-left: -37px;
+		background-color: $main-color;
+	}
+}
+.title_light_color {
+	color: #fff;
+}
+.undertitle {
+	position: relative;
+	z-index: 1;
+	margin: 30px 0 100px 0;
+	text-align: center;
+	color: $utc;
+	h3 {
+		margin: 0;
+		font-size: 19px;
+	}
+}
+.btn {
+
+
+	a, button {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		padding: 15px 40px;
+		color: $tc;
+		border: 2px solid $main-color;
+		text-decoration: none;
+		font-weight: 800;
+		transition: all 0.3s ease-out;
+		font-size: 12px;
+		text-transform: uppercase;
+		span {
+			position: relative;
+			z-index: 1;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			z-index: 0;
+			top: 0;
+			bottom: 100%;
+			left: 0;
+			right: 0;
+			background-color: $main-color;
+			transition: all 0.3s ease-out;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			z-index: 0;
+			bottom: 0;
+			top: 100%;
+			left: 0;
+			right: 0;
+			background-color: $main-color;
+			transition: all 0.3s ease-out;
+		}
+
+		&:hover, &:active, &:focus {
+			color: #fff;
+			&:before {
+				bottom: 40%;
+			}
+			&:after {
+				top: 40%;
+			}
+		}
+	}
+}
+.btn_red {
+	a, button {
+		color: #fff;
+		background-color: $main-color;
+		&:before, &:after {
+			background-color: #fff;
+		}
+		&:hover, &:active, &:focus {
+			color: $tc;
+		}
+	}
+
+}
+.btn_white_color {
+	a {
+		color: #fff;
+	}
+}
+.sect_with_dark_bg {
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: $dark;
+        transform: skewY(-5deg);
+    }
+}
+.sect_with_dark_bg.joint_top {
+    padding: 240px 0 140px 0;
+    margin-top: -140px;
+}
+.sect_with_dark_bg.joint_bottom {
+    padding: 100px 0 240px 0;
+    margin-bottom: -140px;
+}
+
+//Custom Styles Here
+@import "components/header.scss";
+@import "components/about-us.scss";
+@import "components/events.scss";
+@import "components/services.scss";
+@import "components/news.scss";
+@import "components/contacts.scss";
+@import "components/footer.scss";
+//agency page
+@import "components/our-team.scss";
+//services page
+@import "components/content-slider.scss";
+//clients page
+@import "components/clients.scss";
+
+//@import "build/scss/components/magnific-popup.scss";
+
+//ALWAYS END
+@import "components/media.scss";

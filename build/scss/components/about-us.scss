@@ -1,0 +1,298 @@
+.about-us {
+    position: relative;
+    padding: 80px 0 100px 0;
+    background-color: #fff;
+}
+.about-us__wrapper {
+    @extend .container;
+}
+.about-us__item-box {
+    margin: 0 0 50px 0;
+    font-size: 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+
+}
+.about-us__item {
+    // flex-grow: 1;
+    // flex-shrink: 1;
+    display: inline-block;
+    vertical-align: top;
+    width: 25%;
+    padding: 0 10px;
+    margin: 0 0 30px 0;
+    text-align: left;
+}
+.about-us__item:nth-child(2) {
+    .about-us__item-title {
+        animation-delay: .3s;
+    }
+}
+.about-us__item:nth-child(3) {
+    .about-us__item-title {
+        animation-delay: .6s;
+    }
+}
+.about-us__item:nth-child(4) {
+    .about-us__item-title {
+        animation-delay: .9s;
+    }
+}
+.about-us__item-title {
+    margin: 0 0 10px 0;
+    span {
+        white-space: nowrap;
+        font-size: 30px;
+        color: $tc;
+        font-family: 'Bebas Neue';
+        font-weight: 600;
+    }
+    b {
+        font-size: 70px;
+        color: $main-color;
+        font-family: 'Open Sans';
+        font-weight: 800;
+        line-height: 1;
+    }
+}
+.about-us__item-text {
+    margin: 10px 0 0 0;
+    font-size: 14px;
+    color: $utc;
+    line-height: 1.8;
+    p {
+        margin: 0;
+    }
+}
+.about-us__button {
+    text-align: center;
+}
+
+.about-us__advantages-box {
+    margin: 0 0 40px 0;
+    font-size: 0;
+    display: flex;
+    justify-content: center;
+
+}
+.about-us__advantages-item {
+    @extend .clearfix;
+    display: inline-block;
+    vertical-align: top;
+    width: 33.3%;
+    flex-grow: 1;
+    &:hover {
+        .about-us__advantages-img {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+.about-us__advantages-content {
+    position: relative;
+    z-index: 1;
+    padding: 40px 40px 50px 40px;
+    &:before {
+        content: '';
+        position: absolute;
+        top: -36px;
+        left: 50%;
+        margin-left: -18px;
+        border: 18px solid transparent;
+        border-bottom: 18px solid #fff;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -36px;
+        left: 50%;
+        margin-left: -18px;
+        border: 18px solid transparent;
+        border-top: 18px solid #fff;
+    }
+}
+.about-us__advantages-title {
+    margin: 0 0 15px 0;
+    font-family: 'Bebas Neue';
+    color: $tc;
+    line-height: 1;
+    h4 {
+        margin: 0;
+        font-size: 30px;
+        font-weight: 600;
+    }
+}
+.about-us__advantages-text {
+    margin: 15px 0 0 0;
+    font-size: 14px;
+    color: $utc;
+    line-height: 1.6;
+    p {
+        margin: 0;
+    }
+}
+.about-us__advantages-img {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: transform 1s ease;
+    }
+}
+.about-us__advantages-buttons {
+    text-align: center;
+    a {
+        margin: 10px;
+    }
+}
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1600px) {
+
+}
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1232px) {
+    .about-us__item-title {
+
+        span {
+
+            font-size: 26px;
+
+        }
+        b {
+            font-size: 54px;
+
+        }
+    }
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .about-us__item-box {
+        flex-wrap: wrap;
+    }
+    .about-us__item {
+        width: 50%;
+    }
+    .about-us__item-title {
+
+        span {
+
+            font-size: 30px;
+
+        }
+        b {
+            font-size: 70px;
+
+        }
+    }
+    .about-us__advantages-box {
+        display: block;
+    }
+    .about-us__advantages-item {
+        width: 100%;
+    }
+    .about-us__advantages-content {
+        &:before, &:after {
+            display: none;
+        }
+    }
+    .about-us__advantages-item_to-left {
+        .about-us__advantages-content {
+            float: right;
+            width: 60%;
+        }
+        .about-us__advantages-img {
+            float: left;
+            width: 40%;
+        }
+    }
+    .about-us__advantages-item_to-right {
+        .about-us__advantages-content {
+            float: left;
+            width: 60%;
+        }
+        .about-us__advantages-img {
+            float: right;
+            width: 40%;
+        }
+    }
+
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .about-us__item-title {
+
+        span {
+
+            font-size: 24px;
+
+        }
+        b {
+            font-size: 50px;
+            font-weight: 600;
+        }
+    }
+
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 640px) {
+    .about-us__advantages-content {
+
+        padding: 20px 20px 30px;
+    }
+    .about-us__advantages-title {
+        h4 {
+            font-size: 24px;
+        }
+    }
+}
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+    .about-us__item {
+        padding: 0 20px;
+        width: 100%;
+    }
+    .about-us__advantages-item {
+        margin: 0 0 30px 0;
+    }
+    .about-us__advantages-content {
+        padding: 20px 10px;
+        &:before, &:after {
+            display: block;
+        }
+    }
+    .about-us__advantages-item_to-left {
+        .about-us__advantages-content {
+            float: none;
+            width: 100%;
+        }
+        .about-us__advantages-img {
+            float: none;
+            width: 100%;
+        }
+    }
+    .about-us__advantages-item_to-right {
+        .about-us__advantages-content {
+            float: none;
+            width: 100%;
+        }
+        .about-us__advantages-img {
+            float: none;
+            width: 100%;
+        }
+    }
+}
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+	/**/
+}

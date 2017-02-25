@@ -1,0 +1,223 @@
+.news {
+    padding: 100px 0 140px 0;
+}
+.news__wrapper {
+    position: relative;
+    z-index: 1;
+    @extend .container;
+}
+
+.news__box {
+    position: relative;
+    z-index: 1;
+    font-size: 0;
+    display: flex;
+    justify-content: center;
+}
+.news__slider {
+    position: relative;
+    z-index: 1;
+    font-size: 0;
+    .news__item {
+        width: 100%;
+    }
+    .owl-nav {
+        display: block !important;
+		margin: 30px 0 0 0;
+		text-align: center;
+		.owl-prev,
+		.owl-next {
+			display: inline-block;
+			vertical-align: top;
+			margin: 0 42px;
+			font-size: 32px;
+			line-height: 1;
+			color: #fff;
+			transition: all .3s ease;
+			&:hover, &:active {
+				transform: scale(1.1);
+				color: $main-color;
+			}
+		}
+		.owl-prev {
+			&:before {
+				content: '\e80b';
+				font-family: "fontello";
+				  font-style: normal;
+				  font-weight: normal;
+				  speak: none;
+				  display: inline-block;
+				  text-decoration: inherit;
+				  text-align: center;
+				  font-variant: normal;
+				  text-transform: none;
+				  -webkit-font-smoothing: antialiased;
+				  -moz-osx-font-smoothing: grayscale;
+			}
+		}
+		.owl-next {
+			&:before {
+				content: '\e80a';
+				font-family: "fontello";
+				  font-style: normal;
+				  font-weight: normal;
+				  speak: none;
+				  display: inline-block;
+				  text-decoration: inherit;
+				  text-align: center;
+				  font-variant: normal;
+				  text-transform: none;
+				  -webkit-font-smoothing: antialiased;
+				  -moz-osx-font-smoothing: grayscale;
+			}
+		}
+        .disabled {
+            opacity: .5;
+        }
+	}
+}
+.news__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 25%;
+    padding: 50px 40px;
+    background-color: #292c2f;
+    text-decoration: none;
+    transition: background-color .8s ease;
+    border-right: 1px solid $dark;
+    border-bottom: 1px solid $dark;
+    &:hover, &:active {
+        background-color: $main-color;
+        .news__item-category {
+            color: #333;
+        }
+        .news__item-author {
+            color: #333;
+        }
+    }
+}
+.news__item:nth-child(2) {
+    animation-delay: .3s;
+}
+.news__item:nth-child(3) {
+    animation-delay: .6s;
+}
+.news__item:nth-child(4) {
+    animation-delay: .9s;
+}
+.news__item-category {
+    margin: 0 0 10px 0;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $main-color;
+    transition: color .8s ease;
+}
+.news__item-title {
+    min-height: 180px;
+    margin: 10px 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed';
+    h4 {
+        margin: 0;
+        line-height: 1;
+        font-size: 30px;
+        font-weight: 500;
+    }
+}
+.news__item-author {
+    margin: 10px 0 5px 0;
+    color: $main-color;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color .8s ease;
+}
+.news__item-date {
+    margin: 5px 0 0 0;
+    color: #fff;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1600px) {
+
+}
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1232px) {
+    .news__item {
+        padding: 30px 20px;
+    }
+    .news__item-title {
+        min-height: 140px;
+        h4 {
+            font-size: 24px;
+        }
+    }
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .news__box {
+        flex-wrap: wrap;
+    }
+    .news__item {
+        width: 50%;
+        padding: 50px 40px;
+    }
+    .news__item-title {
+        min-height: 180px;
+        h4 {
+            font-size: 30px;
+        }
+    }
+    .news__slider {
+        .news__item {
+            padding: 30px 20px;
+            }
+            .news__item-title {
+            min-height: 140px;
+            h4 {
+                font-size: 24px;
+            }
+        }
+    }
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 640px) {
+    .news__item {
+        padding: 30px 20px;
+    }
+    .news__item-title {
+        min-height: 140px;
+        h4 {
+            font-size: 24px;
+        }
+    }
+
+}
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+    .news__item {
+        width: 100%;
+        padding: 50px 40px;
+    }
+}
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+	/**/
+}

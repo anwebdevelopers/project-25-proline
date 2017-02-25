@@ -1,0 +1,297 @@
+.section-slider {
+    padding: 100px 0 140px 0;
+}
+.section-slider.sect_with_dark_bg {
+
+    .content-slider {
+        .owl-nav {
+    		.owl-prev,
+    		.owl-next {
+                color: #fff;
+                &:hover, &:active {
+    				transform: scale(1.1);
+    				color: $main-color;
+    			}
+            }
+        }
+    }
+}
+.section-slider__wrapper {
+    position: relative;
+    z-index: 1;
+    @extend .container;
+}
+.content-slider {
+    .title {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    > .owl-nav {
+        display: block !important;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        right: 0;
+		.owl-prev,
+		.owl-next {
+			display: inline-block;
+			vertical-align: top;
+
+			font-size: 32px;
+			line-height: 1;
+			color: #111;
+			transition: all .3s ease;
+			&:hover, &:active {
+				transform: scale(1.1);
+				color: $main-color;
+			}
+		}
+		.owl-prev {
+            position: absolute;
+            left: 0;
+            top: 0;
+			&:before {
+				content: '\e80b';
+				font-family: "fontello";
+				  font-style: normal;
+				  font-weight: normal;
+				  speak: none;
+				  display: inline-block;
+				  text-decoration: inherit;
+				  text-align: center;
+				  font-variant: normal;
+				  text-transform: none;
+				  -webkit-font-smoothing: antialiased;
+				  -moz-osx-font-smoothing: grayscale;
+			}
+		}
+		.owl-next {
+            position: absolute;
+            top: 0;
+            right: 0;
+			&:before {
+				content: '\e80a';
+				font-family: "fontello";
+				  font-style: normal;
+				  font-weight: normal;
+				  speak: none;
+				  display: inline-block;
+				  text-decoration: inherit;
+				  text-align: center;
+				  font-variant: normal;
+				  text-transform: none;
+				  -webkit-font-smoothing: antialiased;
+				  -moz-osx-font-smoothing: grayscale;
+			}
+		}
+        .disabled {
+            opacity: .5;
+        }
+	}
+
+    .owl-item {
+        opacity: 0;
+        transition: all .3s ease;
+        .title {
+            transform: scale(.3);
+            transition: transform 1s ease;
+        }
+    }
+    .owl-item.active {
+        opacity: 1;
+        .title {
+            transform: scale(1);
+        }
+    }
+}
+
+.content-slider__box {
+    @extend .clearfix;
+}
+.content-slider__img {
+    float: right;
+    width: 50%;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.content-slider__carousel {
+    float: right;
+    width: 50%;
+    .owl-nav {
+        display: block !important;
+		margin: 30px 0 0 0;
+		text-align: center;
+		.owl-prev,
+		.owl-next {
+			display: inline-block;
+			vertical-align: top;
+			margin: 0 42px;
+			font-size: 32px;
+			line-height: 1;
+			color: #111;
+			transition: all .3s ease;
+			&:hover, &:active, &:focus {
+				transform: scale(1.1);
+				color: $main-color;
+			}
+		}
+		.owl-prev {
+			&:before {
+				content: '\e80b';
+				font-family: "fontello";
+				  font-style: normal;
+				  font-weight: normal;
+				  speak: none;
+				  display: inline-block;
+				  text-decoration: inherit;
+				  text-align: center;
+				  font-variant: normal;
+				  text-transform: none;
+				  -webkit-font-smoothing: antialiased;
+				  -moz-osx-font-smoothing: grayscale;
+			}
+		}
+		.owl-next {
+			&:before {
+				content: '\e80a';
+				font-family: "fontello";
+				  font-style: normal;
+				  font-weight: normal;
+				  speak: none;
+				  display: inline-block;
+				  text-decoration: inherit;
+				  text-align: center;
+				  font-variant: normal;
+				  text-transform: none;
+				  -webkit-font-smoothing: antialiased;
+				  -moz-osx-font-smoothing: grayscale;
+			}
+		}
+        .disabled {
+            opacity: .5;
+        }
+	}
+}
+.content-slider__carousel-item {
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.content-slider__text-box {
+    width: 40%;
+}
+.content-slider__text {
+    h5 {
+        margin: 0 0 10px 0;
+        font-size: 15px;
+        font-weight: 600;
+        color: $tc;
+    }
+    b {
+        font-size: 15px;
+        font-weight: 600;
+        color: $tc;
+    }
+    p {
+        margin: 10px 0;
+        line-height: 1.6;
+        color: $utc;
+        font-size: 14px;
+    }
+    a {
+        display: block;
+        margin: 10px 0;
+        line-height: 1.6;
+        color: $main-color;
+        font-size: 14px;
+        &:hover, &:active {
+            text-decoration: none;
+        }
+    }
+    ul {
+        margin: 10px 0;
+        padding: 0 0 0 10px;
+        line-height: 1.6;
+        color: $utc;
+        font-size: 14px;
+        list-style: none;
+        li {
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                left: -10px;
+                top: 9px;
+                width: 3px;
+                height: 3px;
+                background-color: $utc;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+.content-slider__button {
+    margin: 40px 0 0 0;
+}
+.content-slider__text_light_color {
+    h5 {
+        color: #fff;
+    }
+}
+
+
+
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1600px) {
+
+}
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1232px) {
+    .content-slider__text-box,
+    .content-slider__carousel,
+    .content-slider__img {
+        width: 48%;
+    }
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .content-slider {
+        > .owl-nav {
+            top: 0;
+        }
+    }
+
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .content-slider__carousel,
+    .content-slider__img {
+        float: none;
+        width: 100%
+    }
+    .content-slider__text-box {
+        width: 100%;
+        margin: 40px 0 0 0;
+    }
+    .content-slider__button {
+        text-align: center;
+    }
+}
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+	/**/
+}
